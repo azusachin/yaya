@@ -183,6 +183,34 @@ const ExperimentVisual = ({ experimentId, language = "zh" }) => {
       .attr("fill", "#ffffff")
       .attr("opacity", 0.7);
 
+    const particleGroups = [
+      { x: 55, y: 80, color: palette.left },
+      { x: 245, y: 80, color: palette.right },
+      { x: 165, y: 165, color: palette.product }
+    ];
+
+    const particles = particleGroups.flatMap((group, groupIndex) =>
+      Array.from({ length: 10 }).map((_, index) => ({
+        id: `${groupIndex}-${index}`,
+        baseX: group.x + Math.random() * 60,
+        baseY: group.y + Math.random() * 35,
+        radius: 2 + Math.random() * 2.5,
+        color: group.color,
+        offset: Math.random() * Math.PI * 2
+      }))
+    );
+
+    const particleNodes = svg
+      .selectAll(".particle")
+      .data(particles)
+      .join("circle")
+      .attr("class", "particle")
+      .attr("cx", (d) => d.baseX)
+      .attr("cy", (d) => d.baseY)
+      .attr("r", (d) => d.radius)
+      .attr("fill", (d) => d.color)
+      .attr("opacity", 0.6);
+
     if (experimentId === "oxygen-preparation") {
       drawFlask({ x: 35, y: 40, label: palette.labels[language][0] });
       svg
@@ -253,6 +281,9 @@ const ExperimentVisual = ({ experimentId, language = "zh" }) => {
     const animation = timer((elapsed) => {
       const t = (elapsed / 1200) % 1;
       bubbleNodes.attr("cy", (d) => d.y - t * 14).attr("opacity", 0.4 + t * 0.4);
+      particleNodes
+        .attr("cx", (d) => d.baseX + Math.sin(t * Math.PI * 2 + d.offset) * 6)
+        .attr("cy", (d) => d.baseY + Math.cos(t * Math.PI * 2 + d.offset) * 4);
     });
 
     return () => animation.stop();
