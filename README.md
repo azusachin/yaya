@@ -34,6 +34,10 @@
 │   │   ├── SearchBar.jsx
 │   │   ├── Seo.jsx
 │   │   ├── TagFilter.jsx
+│   │   ├── Footer.jsx
+│   │   ├── ExperimentsPage.jsx
+│   │   ├── PlaceholderPage.jsx
+│   │   ├── VisualizerCanvas.jsx
 │   │   └── VisualizationPanel.jsx
 │   ├── data/
 │   │   └── experiments.js
@@ -77,6 +81,7 @@ npm run dev
 - 使用 D3.js 在 SVG 中绘制两个“反应容器”。
 - 通过粒子（圆形）模拟反应物移动与混合过程。
 - 动画结束后将颜色过渡为产物颜色，帮助理解反应发生的阶段。
+ - 交互区支持拖放试剂并反馈反应状态。
 
 如需扩展为更真实的模拟，可进一步引入：
 

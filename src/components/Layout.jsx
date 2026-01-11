@@ -3,6 +3,7 @@ import { useMemo, useState } from "react";
 import LanguageContext from "./LanguageContext.jsx";
 import Header from "./Header.jsx";
 import LoadingOverlay from "./LoadingOverlay.jsx";
+import Footer from "./Footer.jsx";
 
 const Layout = () => {
   const [language, setLanguage] = useState("zh");
@@ -16,6 +17,7 @@ const Layout = () => {
         <main className="main">
           <Outlet />
         </main>
+        <Footer />
       </div>
     </LanguageContext.Provider>
   );

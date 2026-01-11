@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import ExperimentVisual from "./ExperimentVisual.jsx";
+import VisualizerCanvas from "./VisualizerCanvas.jsx";
 import { useLanguage } from "./LanguageContext.jsx";
 
 const VisualizationPanel = ({ experiment }) => {
@@ -33,7 +33,7 @@ const VisualizationPanel = ({ experiment }) => {
 
   return (
     <div className="visual-panel">
-      <ExperimentVisual experimentId={experiment.id} language={language} />
+      <VisualizerCanvas experimentId={experiment.id} />
       <div className="visual-panel__controls">
         <div className="visual-panel__reagents">
           <h4>{language === "zh" ? "可拖放试剂" : "Draggable reagents"}</h4>
@@ -59,7 +59,7 @@ const VisualizationPanel = ({ experiment }) => {
               ))}
             </div>
           </div>
-          <button className="link button" type="button" onClick={reset}>
+          <button className="button" type="button" onClick={reset}>
             {language === "zh" ? "重置模拟" : "Reset"}
           </button>
         </div>

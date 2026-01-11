@@ -96,12 +96,12 @@ const HomePage = () => {
       </div>
 
       <div className="hero__actions">
-        <button className="button" type="button">
+        <a className="button" href="/experiments">
           {language === "zh" ? "开始学习" : "Start Learning"}
-        </button>
-        <button className="button button--ghost" type="button">
+        </a>
+        <a className="button button--ghost" href="/experiments">
           {language === "zh" ? "查看实验导航" : "View Experiments"}
-        </button>
+        </a>
       </div>
 
       <div className="banner">
