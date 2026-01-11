@@ -24,6 +24,34 @@ body {
   color: var(--text);
   line-height: 1.6;
   overflow-x: hidden;
+  position: relative;
+}
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+body::before {
+  background-image:
+    linear-gradient(rgba(63, 212, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(63, 212, 255, 0.08) 1px, transparent 1px);
+  background-size: 120px 120px;
+  opacity: 0.25;
+}
+
+body::after {
+  background: linear-gradient(
+    180deg,
+    rgba(8, 20, 32, 0.2) 0%,
+    rgba(8, 20, 32, 0.35) 45%,
+    rgba(3, 6, 10, 0.6) 100%
+  );
+  mix-blend-mode: screen;
 }
 
 .ambient-glow {
@@ -34,12 +62,12 @@ body {
     radial-gradient(circle at 80% 10%, rgba(14, 86, 131, 0.4), transparent 45%),
     radial-gradient(circle at 50% 90%, rgba(6, 24, 42, 0.6), transparent 60%);
   pointer-events: none;
-  z-index: 0;
+  z-index: 1;
 }
 
 .site-header {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -117,7 +145,7 @@ body {
 
 main {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   padding: 60px 8vw 80px;
   display: flex;
   flex-direction: column;
@@ -295,7 +323,7 @@ main {
   color: var(--muted);
   border-top: 1px solid rgba(63, 212, 255, 0.2);
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 @media (max-width: 720px) {
