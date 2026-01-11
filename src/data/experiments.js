@@ -32,9 +32,21 @@ export const experiments = [
         "Analyze the exothermic nature of neutralization."
       ]
     },
+    explanation: {
+      zh: "H⁺与OH⁻结合生成水，温度上升说明中和反应放热。",
+      en: "H⁺ and OH⁻ form water; the temperature rise indicates an exothermic reaction."
+    },
     apparatus: {
       zh: ["烧杯", "温度计", "量筒", "玻璃棒", "滴管"],
       en: ["Beaker", "Thermometer", "Graduated cylinder", "Glass rod", "Dropper"]
+    },
+    reagents: {
+      zh: ["稀盐酸", "氢氧化钠溶液"],
+      en: ["Dilute HCl", "NaOH solution"]
+    },
+    safety: {
+      zh: ["佩戴护目镜与手套。", "若溶液溅出需用大量清水冲洗。"],
+      en: ["Wear goggles and gloves.", "Rinse with water if solution splashes."]
     }
   },
   {
@@ -70,9 +82,21 @@ export const experiments = [
         "Test oxygen with a glowing splint."
       ]
     },
+    explanation: {
+      zh: "MnO₂加速H₂O₂分解，产生氧气并可使带火星木条复燃。",
+      en: "MnO₂ catalyzes H₂O₂ decomposition, producing oxygen that relights a splint."
+    },
     apparatus: {
       zh: ["锥形瓶", "导管", "集气瓶", "水槽", "滴管"],
       en: ["Erlenmeyer flask", "Delivery tube", "Gas jar", "Water trough", "Dropper"]
+    },
+    reagents: {
+      zh: ["过氧化氢溶液", "二氧化锰"],
+      en: ["Hydrogen peroxide", "Manganese dioxide"]
+    },
+    safety: {
+      zh: ["操作时远离明火。", "避免触碰浓过氧化氢。"],
+      en: ["Keep away from flames.", "Avoid contact with concentrated H₂O₂."]
     }
   },
   {
@@ -108,9 +132,21 @@ export const experiments = [
         "Record crystal shape and analyze conditions."
       ]
     },
+    explanation: {
+      zh: "冷却降低溶解度使晶体析出，结晶过程体现溶解度随温度变化。",
+      en: "Cooling lowers solubility, leading to crystallization."
+    },
     apparatus: {
       zh: ["烧杯", "酒精灯", "漏斗", "滤纸", "玻璃棒"],
       en: ["Beaker", "Alcohol lamp", "Funnel", "Filter paper", "Glass rod"]
+    },
+    reagents: {
+      zh: ["硫酸铜晶体", "蒸馏水"],
+      en: ["Copper sulfate crystals", "Distilled water"]
+    },
+    safety: {
+      zh: ["加热时防止溶液飞溅。", "避免皮肤接触硫酸铜。"],
+      en: ["Avoid splashing while heating.", "Avoid skin contact with CuSO₄."]
     }
   },
   {
@@ -146,9 +182,21 @@ export const experiments = [
         "Cool to obtain salt crystals."
       ]
     },
+    explanation: {
+      zh: "利用溶解度差异与过滤操作分离固液，再通过蒸发得到溶质。",
+      en: "Use solubility difference and filtration, then evaporate to recover solute."
+    },
     apparatus: {
       zh: ["烧杯", "漏斗", "滤纸", "玻璃棒", "蒸发皿"],
       en: ["Beaker", "Funnel", "Filter paper", "Glass rod", "Evaporating dish"]
+    },
+    reagents: {
+      zh: ["泥沙与食盐混合物", "蒸馏水"],
+      en: ["Sand-salt mixture", "Distilled water"]
+    },
+    safety: {
+      zh: ["加热蒸发时注意防烫。", "不要让溶液沸腾溢出。"],
+      en: ["Beware of hot surfaces.", "Avoid boiling over."]
     }
   },
   {
@@ -184,9 +232,21 @@ export const experiments = [
         "Observe and record separated pigment bands."
       ]
     },
+    explanation: {
+      zh: "色素在固定相与流动相之间分配不同，迁移速率不同形成分离。",
+      en: "Different partitioning leads to different migration rates."
+    },
     apparatus: {
       zh: ["滤纸条", "烧杯", "铅笔", "滴管", "展开剂"],
       en: ["Filter paper strip", "Beaker", "Pencil", "Dropper", "Solvent"]
+    },
+    reagents: {
+      zh: ["墨水", "展开剂"],
+      en: ["Ink", "Solvent"]
+    },
+    safety: {
+      zh: ["避免展开剂接触皮肤。", "实验后洗手。"],
+      en: ["Avoid solvent contact with skin.", "Wash hands after the experiment."]
     }
   },
   {
@@ -222,9 +282,21 @@ export const experiments = [
         "Record temperature changes and stop heating."
       ]
     },
+    explanation: {
+      zh: "蒸馏利用沸点差异分离液体混合物。",
+      en: "Distillation separates liquids based on boiling points."
+    },
     apparatus: {
       zh: ["蒸馏烧瓶", "温度计", "冷凝管", "接收瓶", "酒精灯"],
       en: ["Distillation flask", "Thermometer", "Condenser", "Receiver", "Alcohol lamp"]
+    },
+    reagents: {
+      zh: ["水-乙醇混合液", "沸石"],
+      en: ["Water-ethanol mixture", "Boiling chips"]
+    },
+    safety: {
+      zh: ["酒精灯使用时远离易燃物。", "保持冷凝水循环。"],
+      en: ["Keep flame away from flammables.", "Ensure condenser water flow."]
     }
   },
   {
@@ -260,9 +332,21 @@ export const experiments = [
         "Record solution and solid changes."
       ]
     },
+    explanation: {
+      zh: "Fe置换Cu²⁺生成Cu沉积并形成浅绿色FeSO₄溶液。",
+      en: "Fe displaces Cu²⁺, forming Cu and FeSO₄ solution."
+    },
     apparatus: {
       zh: ["烧杯", "铁钉", "镊子", "玻璃棒"],
       en: ["Beaker", "Iron nail", "Tweezers", "Glass rod"]
+    },
+    reagents: {
+      zh: ["硫酸铜溶液", "铁钉"],
+      en: ["Copper sulfate solution", "Iron nail"]
+    },
+    safety: {
+      zh: ["避免溶液接触皮肤。", "实验后清洗器具。"],
+      en: ["Avoid skin contact with solution.", "Clean equipment after use."]
     }
   },
   {
@@ -298,9 +382,21 @@ export const experiments = [
         "Collect the white solid and record observations."
       ]
     },
+    explanation: {
+      zh: "镁燃烧生成白色MgO，属于化合反应。",
+      en: "Magnesium burns to form white MgO in a synthesis reaction."
+    },
     apparatus: {
       zh: ["镁条", "坩埚钳", "酒精灯", "集气瓶"],
       en: ["Magnesium ribbon", "Crucible tongs", "Alcohol lamp", "Gas jar"]
+    },
+    reagents: {
+      zh: ["镁条", "氧气"],
+      en: ["Magnesium ribbon", "Oxygen"]
+    },
+    safety: {
+      zh: ["避免直视强光。", "燃烧后冷却再触碰器材。"],
+      en: ["Avoid staring at bright light.", "Let equipment cool before handling."]
     }
   },
   {
@@ -336,9 +432,21 @@ export const experiments = [
         "Observe limewater turning cloudy."
       ]
     },
+    explanation: {
+      zh: "生成的CO₂使石灰水变浑浊，验证气体产物。",
+      en: "CO₂ turns limewater cloudy, confirming the gas product."
+    },
     apparatus: {
       zh: ["锥形瓶", "导管", "石灰水", "滴管"],
       en: ["Erlenmeyer flask", "Delivery tube", "Limewater", "Dropper"]
+    },
+    reagents: {
+      zh: ["碳酸钙", "稀盐酸"],
+      en: ["Calcium carbonate", "Dilute HCl"]
+    },
+    safety: {
+      zh: ["注意气体导管连接牢固。", "酸液溅出需及时冲洗。"],
+      en: ["Ensure tubing is secure.", "Rinse immediately if acid splashes."]
     }
   }
 ];

@@ -4,8 +4,8 @@
 
 ## 功能概览
 
-- 🧪 每个实验包含步骤、原理与反应方程式（中英文）
-- 🎥 使用 D3.js 渲染动态实验可视化
+- 🧪 每个实验包含步骤、原理、反应解释与安全提示（中英文）
+- 🎥 使用 D3.js 渲染器具化实验可视化，并提供拖放模拟
 - 🔍 标签与搜索过滤，快速定位实验内容
 - 🌐 支持中英文切换
 - 🚀 GitHub + Cloudflare Pages 自动部署
@@ -23,13 +23,18 @@
 │   │   ├── ExperimentCard.jsx
 │   │   ├── ExperimentPage.jsx
 │   │   ├── ExperimentVisual.jsx
+│   │   ├── FeedbackForm.jsx
 │   │   ├── Header.jsx
 │   │   ├── HomePage.jsx
 │   │   ├── LanguageContext.jsx
 │   │   ├── LanguageToggle.jsx
 │   │   ├── Layout.jsx
+│   │   ├── LoadingOverlay.jsx
+│   │   ├── NotFound.jsx
 │   │   ├── SearchBar.jsx
-│   │   └── TagFilter.jsx
+│   │   ├── Seo.jsx
+│   │   ├── TagFilter.jsx
+│   │   └── VisualizationPanel.jsx
 │   ├── data/
 │   │   └── experiments.js
 │   ├── App.jsx
@@ -47,6 +52,12 @@ npm install
 npm run dev
 ```
 
+## 构建与部署
+
+- 构建命令：`npm run build`
+- 构建输出目录：`dist`
+- Cloudflare Pages 可直接使用构建配置 `npm install && npm run build` 与输出目录 `dist`
+
 ## Cloudflare 自动部署（GitHub Actions）
 
 1. 在 Cloudflare Pages 创建站点，并连接 GitHub 仓库。
@@ -54,6 +65,12 @@ npm run dev
    - `CLOUDFLARE_API_TOKEN`
    - `CLOUDFLARE_PROJECT_NAME`
 3. 推送代码后，GitHub Actions 会自动构建并发布。
+
+## 设计规范摘要
+
+- **配色**：主色 `#2563eb`，辅助色 `#60a5fa`、`#f472b6`、`#34d399`，大面积留白。
+- **排版**：标题 24-32px，正文 14-16px，强调内容使用圆角卡片。
+- **布局**：模块化卡片 + banner 聚焦，实验详情采用左右双栏布局并在移动端折叠为单栏。
 
 ## 可视化实验实现思路
 
