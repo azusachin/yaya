@@ -52,7 +52,6 @@ npm run dev
 1. 在 Cloudflare Pages 创建站点，并连接 GitHub 仓库。
 2. 在仓库 Settings → Secrets 添加以下变量：
    - `CLOUDFLARE_API_TOKEN`
-   - `CLOUDFLARE_ACCOUNT_ID`
    - `CLOUDFLARE_PROJECT_NAME`
 3. 推送代码后，GitHub Actions 会自动构建并发布。
 
