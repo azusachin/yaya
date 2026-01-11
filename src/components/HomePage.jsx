@@ -34,8 +34,8 @@ const HomePage = () => {
         <div>
           <h1>
             {language === "zh"
-              ? "探索实验原理，理解反应过程"
-              : "Explore principles and visualize reactions"}
+              ? "欢迎光临陈韵雅的化学实验室"
+              : "Welcome to Yunya Chen's Chemistry Lab"}
           </h1>
           <p>
             {language === "zh"
