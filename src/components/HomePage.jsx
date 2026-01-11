@@ -60,6 +60,15 @@ const HomePage = () => {
         <TagFilter tags={tags} activeTag={activeTag} onSelect={setActiveTag} />
       </div>
 
+      <div className="unit">
+        <h2>{language === "zh" ? "高一第一学期 第一单元" : "Grade 10 Semester 1 Unit 1"}</h2>
+        <p>
+          {language === "zh"
+            ? "物质及其变化（江苏教材）：本单元常见实验按章节整理如下。"
+            : "Matter and its changes (Jiangsu textbooks): experiments organized by unit."}
+        </p>
+      </div>
+
       <div className="grid">
         {filtered.map((experiment) => (
           <ExperimentCard key={experiment.id} experiment={experiment} />

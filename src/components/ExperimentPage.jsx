@@ -23,6 +23,10 @@ const ExperimentPage = () => {
           <h2>{experiment.title[language]}</h2>
           <p className="equation">{experiment.equation[language]}</p>
           <div className="detail__section">
+            <h3>{language === "zh" ? "所属章节" : "Unit"}</h3>
+            <p>{experiment.unit?.[language] ?? (language === "zh" ? "未标注" : "Not specified")}</p>
+          </div>
+          <div className="detail__section">
             <h3>{language === "zh" ? "实验原理" : "Principle"}</h3>
             <p>{experiment.principle[language]}</p>
           </div>
@@ -34,10 +38,18 @@ const ExperimentPage = () => {
               ))}
             </ol>
           </div>
+          <div className="detail__section">
+            <h3>{language === "zh" ? "实验器具" : "Apparatus"}</h3>
+            <ul>
+              {(experiment.apparatus?.[language] ?? []).map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </div>
         </div>
         <div className="detail__visual">
           <h3>{language === "zh" ? "可视化实验" : "Visualization"}</h3>
-          <ExperimentVisual experimentId={experiment.id} />
+          <ExperimentVisual experimentId={experiment.id} language={language} />
           <p className="visual__note">
             {language === "zh"
               ? "提示：点击可视化区域以重置粒子动画。"

@@ -1,6 +1,10 @@
 export const experiments = [
   {
     id: "acid-base-neutralization",
+    unit: {
+      zh: "高一第一学期 第一单元 物质及其变化",
+      en: "Grade 10 Semester 1 Unit 1: Matter and Its Changes"
+    },
     tags: ["酸碱中和", "滴定", "热效应"],
     title: {
       zh: "盐酸与氢氧化钠中和反应",
@@ -27,10 +31,18 @@ export const experiments = [
         "Record the peak temperature and calculate the rise.",
         "Analyze the exothermic nature of neutralization."
       ]
+    },
+    apparatus: {
+      zh: ["烧杯", "温度计", "量筒", "玻璃棒", "滴管"],
+      en: ["Beaker", "Thermometer", "Graduated cylinder", "Glass rod", "Dropper"]
     }
   },
   {
     id: "oxygen-preparation",
+    unit: {
+      zh: "高一第一学期 第一单元 物质及其变化",
+      en: "Grade 10 Semester 1 Unit 1: Matter and Its Changes"
+    },
     tags: ["气体制备", "催化", "分解"],
     title: {
       zh: "过氧化氢制氧气",
@@ -57,10 +69,18 @@ export const experiments = [
         "Collect oxygen by water displacement.",
         "Test oxygen with a glowing splint."
       ]
+    },
+    apparatus: {
+      zh: ["锥形瓶", "导管", "集气瓶", "水槽", "滴管"],
+      en: ["Erlenmeyer flask", "Delivery tube", "Gas jar", "Water trough", "Dropper"]
     }
   },
   {
     id: "copper-sulfate-crystallization",
+    unit: {
+      zh: "高一第一学期 第一单元 物质及其变化",
+      en: "Grade 10 Semester 1 Unit 1: Matter and Its Changes"
+    },
     tags: ["结晶", "溶解度", "过滤"],
     title: {
       zh: "硫酸铜结晶",
@@ -87,6 +107,10 @@ export const experiments = [
         "Cool naturally and observe crystal formation.",
         "Record crystal shape and analyze conditions."
       ]
+    },
+    apparatus: {
+      zh: ["烧杯", "酒精灯", "漏斗", "滤纸", "玻璃棒"],
+      en: ["Beaker", "Alcohol lamp", "Funnel", "Filter paper", "Glass rod"]
     }
   }
 ];

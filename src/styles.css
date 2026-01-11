@@ -109,6 +109,22 @@ a {
   gap: 16px;
 }
 
+.unit {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+}
+
+.unit h2 {
+  margin: 0 0 8px;
+}
+
+.unit p {
+  margin: 0;
+  color: #475569;
+}
+
 .search {
   display: flex;
   flex-direction: column;
