@@ -350,6 +350,56 @@ export const experiments = [
     }
   },
   {
+    id: "iron-displacement-cuso4-simulator",
+    unit: {
+      zh: "高一第一学期 第三单元 物质的分类与转化",
+      en: "Grade 10 Semester 1 Unit 3: Classification and Transformation"
+    },
+    tags: ["置换反应", "铁", "硫酸铜", "模拟"],
+    title: {
+      zh: "铁置换硫酸铜（交互式模拟）",
+      en: "Iron Displacement of Copper Sulfate (Interactive)"
+    },
+    principle: {
+      zh: "铁的金属活动性强于铜，可将Cu²⁺置换成铜单质，溶液变为浅绿色硫酸亚铁。",
+      en: "Iron is more reactive than copper, displacing Cu²⁺ to form FeSO₄ and copper."
+    },
+    equation: {
+      zh: "Fe(s) + CuSO₄(aq) → FeSO₄(aq) + Cu(s)",
+      en: "Fe(s) + CuSO₄(aq) → FeSO₄(aq) + Cu(s)"
+    },
+    steps: {
+      zh: [
+        "拖拽硫酸铜粉末加入烧杯中的蒸馏水，观察溶液变为浅蓝色。",
+        "使用玻璃搅拌棒点击/拖拽，加速溶解。",
+        "拖拽铁棒进入蓝色溶液，观察表面析出红色铜层。",
+        "溶液颜色由蓝色逐渐变为浅绿色。"
+      ],
+      en: [
+        "Drag CuSO₄ powder into distilled water and observe the pale blue solution.",
+        "Use the glass rod to stir and speed up dissolution.",
+        "Drag the iron rod into the blue solution and observe copper deposition.",
+        "The solution changes from blue to pale green."
+      ]
+    },
+    explanation: {
+      zh: "Fe置换Cu²⁺生成Cu沉积，溶液中形成FeSO₄导致颜色由蓝转浅绿。",
+      en: "Fe displaces Cu²⁺ to deposit Cu; FeSO₄ makes the solution pale green."
+    },
+    apparatus: {
+      zh: ["烧杯（装有蒸馏水）", "硫酸铜粉末", "铁棒", "玻璃搅拌棒", "标签显示面板"],
+      en: ["Beaker (distilled water)", "CuSO₄ powder", "Iron rod", "Glass rod", "Status labels"]
+    },
+    reagents: {
+      zh: ["硫酸铜粉末", "铁棒"],
+      en: ["CuSO₄ powder", "Iron rod"]
+    },
+    safety: {
+      zh: ["避免溶液接触皮肤。", "实验后清洗器具。"],
+      en: ["Avoid skin contact with solution.", "Clean equipment after use."]
+    }
+  },
+  {
     id: "metal-oxygen-reaction",
     unit: {
       zh: "高一第一学期 第三单元 物质的分类与转化",

@@ -427,6 +427,230 @@ a {
   gap: 16px;
 }
 
+.simulator {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.simulator__stage {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.simulator__beaker-zone {
+  background: linear-gradient(180deg, #f8fafc, #eef2ff);
+  border-radius: 18px;
+  padding: 24px;
+  text-align: center;
+  border: 1px solid #e2e8f0;
+}
+
+.beaker {
+  position: relative;
+  margin: 0 auto;
+  width: 220px;
+  height: 220px;
+  border: 2px solid #cbd5f5;
+  border-radius: 24px 24px 18px 18px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.beaker__liquid {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 55%;
+  transition: background 0.6s ease;
+}
+
+.beaker__powder {
+  position: absolute;
+  bottom: 60px;
+  left: 0;
+  right: 0;
+  height: 20px;
+}
+
+.beaker__powder span {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: #2563eb;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: float 2.4s ease-in-out infinite;
+}
+
+.beaker__iron {
+  position: absolute;
+  right: 32px;
+  bottom: 40px;
+}
+
+.iron-rod {
+  position: relative;
+  width: 18px;
+  height: 120px;
+  background: linear-gradient(180deg, #64748b, #334155);
+  border-radius: 9px;
+  overflow: hidden;
+}
+
+.iron-rod__copper {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, #f97316, #b45309);
+  transition: height 0.5s ease;
+  opacity: 0.9;
+}
+
+.beaker__swirl {
+  position: absolute;
+  inset: 40% 12% 25% 12%;
+  border: 2px dashed rgba(59, 130, 246, 0.5);
+  border-radius: 50%;
+  animation: spin 1.2s linear infinite;
+}
+
+.beaker__label {
+  position: absolute;
+  bottom: 8px;
+  left: 0;
+  right: 0;
+  font-size: 12px;
+  color: #475569;
+}
+
+.simulator__hint {
+  margin-top: 12px;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.simulator__bench {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.9fr) 1.1fr;
+  gap: 18px;
+}
+
+.simulator__tools {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 16px;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.tool {
+  padding: 10px;
+  border-radius: 12px;
+  background: #f1f5f9;
+  border: 1px dashed #cbd5f5;
+}
+
+.tool--disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.tool__powder,
+.tool__rod {
+  padding: 10px 12px;
+  border-radius: 999px;
+  background: #e0e7ff;
+  color: #1e3a8a;
+  font-weight: 600;
+  cursor: grab;
+  text-align: center;
+}
+
+.tool__rod {
+  background: #dbeafe;
+}
+
+.tool__stir {
+  padding: 10px 12px;
+  border-radius: 999px;
+  border: 1px solid #cbd5f5;
+  background: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.tool__stir--active {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.simulator__panel {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 16px;
+  border: 1px solid #e2e8f0;
+}
+
+.simulator__panel h4 {
+  margin: 0 0 12px;
+}
+
+.status-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 10px;
+}
+
+.status-card {
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 10px;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 13px;
+  color: #475569;
+}
+
+.status-card strong {
+  color: #0f172a;
+  font-size: 14px;
+}
+
+.simulator__message {
+  margin-top: 12px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: #eef2ff;
+  color: #1e3a8a;
+}
+
+.simulator__message p {
+  margin: 4px 0 0;
+}
+
+.simulator__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.simulator__principle {
+  background: #ecfeff;
+  border-radius: 14px;
+  padding: 12px 14px;
+  border: 1px solid #bae6fd;
+  color: #0f172a;
+}
+
 .visual-panel__reagents h4 {
   margin: 0 0 8px;
 }
@@ -625,6 +849,10 @@ a {
   }
 
   .visual-panel__controls {
+    grid-template-columns: 1fr;
+  }
+
+  .simulator__bench {
     grid-template-columns: 1fr;
   }
 
