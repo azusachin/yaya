@@ -4,11 +4,13 @@ import { useLanguage } from "./LanguageContext.jsx";
 import VisualizationPanel from "./VisualizationPanel.jsx";
 import { useMemo } from "react";
 import Seo from "./Seo.jsx";
+import IronDisplacementSimulator from "./IronDisplacementSimulator.jsx";
 
 const ExperimentPage = () => {
   const { id } = useParams();
   const { language } = useLanguage();
   const experiment = experiments.find((item) => item.id === id);
+  const isIronDisplacementSimulator = experiment?.id === "iron-displacement-cuso4-simulator";
   const sections = useMemo(
     () => [
       { key: "overview", zh: "简介", en: "Overview" },
@@ -68,12 +70,18 @@ const ExperimentPage = () => {
         </div>
         <div className="detail__visual">
           <h3>{language === "zh" ? "可视化实验" : "Visualization"}</h3>
-          <VisualizationPanel experiment={experiment} />
-          <p className="visual__note">
-            {language === "zh"
-              ? "提示：点击可视化区域以重置粒子动画。"
-              : "Tip: click the visualization to reset particle motion."}
-          </p>
+          {isIronDisplacementSimulator ? (
+            <IronDisplacementSimulator />
+          ) : (
+            <>
+              <VisualizationPanel experiment={experiment} />
+              <p className="visual__note">
+                {language === "zh"
+                  ? "提示：点击可视化区域以重置粒子动画。"
+                  : "Tip: click the visualization to reset particle motion."}
+              </p>
+            </>
+          )}
           <div className="step-map">
             <h4>{language === "zh" ? "学习路径" : "Learning path"}</h4>
             <div className="step-map__list">
